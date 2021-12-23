@@ -4,7 +4,7 @@
 package employee;
 
 /**
- * @author ADD YOUR NAME
+ * @author Haleigh Laffan
  *
  */
 
@@ -23,34 +23,34 @@ public class DemoEmployee {
 
 		PartTimeEmployee pEmp1 = new PartTimeEmployee("Jane", "Smith", "123456777", 17.5);
 
-//		Employee emp2 = new Employee("Don", "Holmes", "123456799");
+		Employee emp2 = new Employee("Don", "Holmes", "123456799");
 
-//		PartTimeEmployee pEmp2 = new PartTimeEmployee("Melissa", "Will", "123456666", 23.5);
+		PartTimeEmployee pEmp2 = new PartTimeEmployee("Melissa", "Will", "123456666", 23.5);
 
 		// Upcasting
 		Employee emp3 = pEmp1;
 		System.out.println("emp3");
 		emp3.whoAmI();
 		// TODO To complete
-		// emp3.whoAmI() // prints ... because ...
-		// emp3.getHourlyRate(); // returns syntax error because ...
+		// emp3.whoAmI() // prints PART TIME EMPLOYEE because it calls .whoAmI() in PartTimeEmployee.java
+	    // emp3.getHourlyRate(); // returns syntax error because it is undefined for the type Employee
 
-		// TODO To complete
+		// TODO To complete //done
 		// Add the condition that test that emp3 is an instance of part time employee at
 		// this time
-		// if (CONDITION) {
-		// System.out.println("emp3 instance of part time employee"); // printed
-		// } else {
-		System.out.println("emp3 not instance of part time employee");
-		// }
+		//if (emp3 instanceof PartTimeEmployee) {
+		//System.out.println("emp3 instance of part time employee"); // printed
+		//} else {
+		//System.out.println("emp3 not instance of part time employee");
+		//}
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		//PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
 		// TODO To complete
-		// This instruction compiles / does not compile
+		// This instruction does not compile
 		// This instruction returns a ClassCastException at run time
-		// because ...
+		// because theres no cast for PartTimeEmployee to Employee
 
 		// Downcasting 2
 		// Requires the use of intanceof to avoid a run time cast exception
