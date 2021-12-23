@@ -4,13 +4,12 @@
 package circle;
 
 /**
- * @author ADD YOUR NAME
+ * @author Haleigh Laffan
  *
  */
 
-// TODO Complete the code
-
-public class Circle extends GraphicObject {
+// TODO Complete the code // done//
+public class Circle extends GraphicObject implements Cloneable{
 
 	// No use of encapsulation
 	public double centerX, centerY;
@@ -22,6 +21,21 @@ public class Circle extends GraphicObject {
 	 */
 	public Circle() {
 	}
+	public Circle(double centerX, double centerY, double radius) {
+		this.centerX = centerX;
+		this.centerY = centerY;
+		this.radius = radius;
+	}
+	public double getCenterX() {
+		return centerX;
+	}
+	public double getCenterY() {
+		return centerY;
+	}
+	public double getRadius() {
+		return radius;
+	}
+	
 
 	// overloaded method in Circle
 	// overridden method from GraphicObject
@@ -54,16 +68,16 @@ public class Circle extends GraphicObject {
 	void moveTo(int newX, int newY) {
 	}
 
-	// TODO To complete
+	// TODO To complete // done
 	/**
 	 * @return the Circle with this EXACT format Circle: centerX = ... centerY = ... radius = ...
 	 */
 	@Override
 	public String toString() {
-		return super.toString();
+		return  "Circle: centerX = " + centerX + " centerY = " + centerY + " radius = " + radius;
 	}
 
-	// TODO To complete
+	// TODO To complete //done //
 	// TODO Be sure that you understand the difference between equals and ==
 	/**
 	 * @return true if this and obj have the same values for
@@ -71,16 +85,23 @@ public class Circle extends GraphicObject {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		//return super.equals(obj);
+		if(obj instanceof Circle) {
+			Circle circle = (Circle) obj;
+			if(centerX == getCenterX() && centerY == getCenterY() && radius == getRadius()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
-	// TODO To complete
+	// TODO To complete done
 	/**
 	 * @return an exact copy of the Circle that is a new instance 
 	 */
-	// @Override
-	// protected Object clone() throws CloneNotSupportedException {
-	// return super.clone();
-	// }
+	//@Override
+	protected Object clone() throws CloneNotSupportedException {
+	    return super.clone();
+	}
 
 }
